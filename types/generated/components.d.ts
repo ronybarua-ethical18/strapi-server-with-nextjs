@@ -57,6 +57,51 @@ export interface MenuDropdown extends Schema.Component {
   };
 }
 
+export interface LandingPageService extends Schema.Component {
+  collectionName: 'components_landing_page_services';
+  info: {
+    displayName: 'Service';
+    icon: 'command';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface LandingPageServiceList extends Schema.Component {
+  collectionName: 'components_landing_page_service_lists';
+  info: {
+    displayName: 'ServiceList';
+    icon: 'filter';
+    description: '';
+  };
+  attributes: {
+    Service: Attribute.Component<'landing-page.service', true>;
+  };
+}
+
+export interface LandingPageHero extends Schema.Component {
+  collectionName: 'components_landing_page_heroes';
+  info: {
+    displayName: 'Hero';
+    icon: 'eye';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Text;
+    description: Attribute.Text;
+    button: Attribute.Component<'menu.menu-button', true>;
+    heroIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    topRightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bottomLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    HeroLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    HerorightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroBottomIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -64,6 +109,9 @@ declare module '@strapi/types' {
       'menu.menu-button': MenuMenuButton;
       'menu.link': MenuLink;
       'menu.dropdown': MenuDropdown;
+      'landing-page.service': LandingPageService;
+      'landing-page.service-list': LandingPageServiceList;
+      'landing-page.hero': LandingPageHero;
     }
   }
 }

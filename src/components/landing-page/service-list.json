@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_landing_page_service_lists",
+  "info": {
+    "displayName": "ServiceList",
+    "icon": "filter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Service": {
+      "displayName": "Service",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.service"
+    }
+  }
+}
