@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footer_social_links_sections",
+  "info": {
+    "displayName": "SocialLinksSection",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "SocialLink": {
+      "displayName": "Link",
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.link"
+    }
+  }
+}

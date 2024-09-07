@@ -788,6 +788,45 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Footer: Attribute.DynamicZone<
+      [
+        'footer.social-links-section',
+        'footer.logo-section',
+        'footer.link',
+        'footer.footer',
+        'footer.contact-section',
+        'footer.about-link'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Schema.SingleType {
   collectionName: 'landing_pages';
   info: {
@@ -801,7 +840,23 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
   };
   attributes: {
     PageContent: Attribute.DynamicZone<
-      ['landing-page.service', 'landing-page.service-list', 'landing-page.hero']
+      [
+        'landing-page.service',
+        'landing-page.service-list',
+        'landing-page.hero',
+        'landing-page.feature',
+        'landing-page.feature-list',
+        'landing-page.feature-categories',
+        'landing-page.category',
+        'landing-page.trusted-companies',
+        'landing-page.company',
+        'landing-page.contact',
+        'footer.social-links-section',
+        'footer.logo-section',
+        'footer.link',
+        'footer.footer',
+        'footer.contact-section'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -910,6 +965,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
       'api::section.section': ApiSectionSection;

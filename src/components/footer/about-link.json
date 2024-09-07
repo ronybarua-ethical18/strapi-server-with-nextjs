@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footer_about_links",
+  "info": {
+    "displayName": "AboutLink",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

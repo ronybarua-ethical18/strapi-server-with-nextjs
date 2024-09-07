@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_landing_page_feature_lists",
+  "info": {
+    "displayName": "FeatureList",
+    "icon": "sun",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Feature": {
+      "displayName": "Feature",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.feature"
+    },
+    "dotLineImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "mobileCircleImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "webCircleImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "arCircleImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  }
+}

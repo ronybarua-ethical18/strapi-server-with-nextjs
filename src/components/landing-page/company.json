@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_landing_page_companies",
+  "info": {
+    "displayName": "TrustedCompany",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -2,7 +2,8 @@
   "collectionName": "components_landing_page_services",
   "info": {
     "displayName": "Service",
-    "icon": "command"
+    "icon": "command",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,14 +14,24 @@
       "type": "text"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "bgType": {
+      "type": "enumeration",
+      "enum": [
+        "purple",
+        "green",
+        "blue",
+        "tomato"
+      ]
     }
   }
 }

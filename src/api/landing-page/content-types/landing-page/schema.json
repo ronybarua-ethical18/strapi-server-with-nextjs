@@ -17,7 +17,19 @@
       "components": [
         "landing-page.service",
         "landing-page.service-list",
-        "landing-page.hero"
+        "landing-page.hero",
+        "landing-page.feature",
+        "landing-page.feature-list",
+        "landing-page.feature-categories",
+        "landing-page.category",
+        "landing-page.trusted-companies",
+        "landing-page.company",
+        "landing-page.contact",
+        "footer.social-links-section",
+        "footer.logo-section",
+        "footer.link",
+        "footer.footer",
+        "footer.contact-section"
       ]
     }
   }

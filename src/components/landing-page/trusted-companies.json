@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_landing_page_trusted_companies",
+  "info": {
+    "displayName": "TrustedCompanies",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "TrustedCompany": {
+      "displayName": "Company",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.company"
+    },
+    "bgImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

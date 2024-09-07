@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_landing_page_features",
+  "info": {
+    "displayName": "Feature",
+    "icon": "strikeThrough",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "mainTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "featureImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mobile",
+        "web",
+        "vr"
+      ]
+    }
+  }
+}

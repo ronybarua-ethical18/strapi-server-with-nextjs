@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_landing_page_categories",
+  "info": {
+    "displayName": "FeatureCategory",
+    "icon": "filter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "viewButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "menu.menu-button"
+    }
+  }
+}

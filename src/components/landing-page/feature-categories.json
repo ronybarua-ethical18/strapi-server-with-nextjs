@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_landing_page_feature_categories",
+  "info": {
+    "displayName": "FeatureCategories",
+    "icon": "filter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "FeatureCategory": {
+      "displayName": "Category",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.category"
+    }
+  }
+}
