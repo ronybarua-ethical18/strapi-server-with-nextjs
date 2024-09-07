@@ -115,6 +115,7 @@ export interface LandingPageHero extends Schema.Component {
     HeroLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     HerorightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     heroBottomIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    contentLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

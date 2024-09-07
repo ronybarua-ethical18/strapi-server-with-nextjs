@@ -26,6 +26,9 @@ const populate = {
       heroBottomIcon:{
         fields:["url"]
       },
+      contentLeftIcon:{
+        fields:["url"]
+      },
       Service: {
         populate: {
           icon: {
