@@ -17,7 +17,8 @@
       "components": [
         "menu.menu-link",
         "menu.menu-button",
-        "menu.dropdown"
+        "menu.dropdown",
+        "menu.logo-section"
       ]
     },
     "title": {

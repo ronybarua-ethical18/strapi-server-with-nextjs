@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_menu_logo_sections",
+  "info": {
+    "displayName": "LogoSection",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

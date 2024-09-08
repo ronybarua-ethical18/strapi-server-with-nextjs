@@ -25,6 +25,18 @@ export interface MenuMenuButton extends Schema.Component {
   };
 }
 
+export interface MenuLogoSection extends Schema.Component {
+  collectionName: 'components_menu_logo_sections';
+  info: {
+    displayName: 'LogoSection';
+    icon: 'picture';
+  };
+  attributes: {
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+  };
+}
+
 export interface MenuLink extends Schema.Component {
   collectionName: 'components_menu_links';
   info: {
@@ -293,6 +305,7 @@ declare module '@strapi/types' {
     export interface Components {
       'menu.menu-link': MenuMenuLink;
       'menu.menu-button': MenuMenuButton;
+      'menu.logo-section': MenuLogoSection;
       'menu.link': MenuLink;
       'menu.dropdown': MenuDropdown;
       'landing-page.trusted-companies': LandingPageTrustedCompanies;

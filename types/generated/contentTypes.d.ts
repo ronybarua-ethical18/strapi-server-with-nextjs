@@ -889,7 +889,12 @@ export interface ApiMainMenuMainMenu extends Schema.SingleType {
   };
   attributes: {
     MainMenuItems: Attribute.DynamicZone<
-      ['menu.menu-link', 'menu.menu-button', 'menu.dropdown']
+      [
+        'menu.menu-link',
+        'menu.menu-button',
+        'menu.dropdown',
+        'menu.logo-section'
+      ]
     >;
     title: Attribute.String;
     sections: Attribute.Relation<
