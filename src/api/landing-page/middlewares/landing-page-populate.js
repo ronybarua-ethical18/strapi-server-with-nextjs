@@ -9,51 +9,69 @@ const populate = {
     populate: {
       button:true,
       heroIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
       topRightIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
       bottomLeftIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
-      HeroLeftIcon:{
-        fields:["url"]
+      heroLeftIcon:{
+        fields:["url", "width", "height"]
       },
-      HerorightIcon:{
-        fields:["url"]
+      heroBgEllipse:{
+        fields:["url", "width", "height"]
+      },
+      heroRightIcon:{
+        fields:["url", "width", "height"]
       },
       heroBottomIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
       contentLeftIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
       Service: {
         populate: {
           icon: {
-            fields: ["url"],
+            fields: ["url", "width", "height"],
           },
         },
       },
       TrustedCompany: {
         populate: {
           logo: {
-            fields: ["url"],
+            fields: ["url", "width", "height"],
           },
         },
       },
       Feature: {
         populate: {
           icon: {
-            fields: ["url"],
+            fields: ["url", "width", "height"],
+          },
+          featureImg: {
+            fields: ["url", "width", "height"],
           },
         },
+      },
+      dotLineImg:{
+        fields: ["url", "width", "height"],
+      },
+      mobileCircleImg:{
+        fields: ["url", "width", "height"],
+      },
+      webCircleImg:{
+        fields: ["url", "width", "height"],
+      },
+      arCircleImg:{
+        fields: ["url", "width", "height"],
       },
       FeatureCategory: {
         populate: {
           icon: {
-            fields: ["url"],
+            fields: ["url", "width", "height"],
           },
           viewButton: {
             fields: ["title", "type", "url"],
@@ -62,10 +80,10 @@ const populate = {
       },
       subscribeBtn:true,
       leftIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
       rightIcon:{
-        fields:["url"]
+        fields:["url", "width", "height"]
       },
       
     },

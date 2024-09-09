@@ -124,10 +124,11 @@ export interface LandingPageHero extends Schema.Component {
     heroIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     topRightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     bottomLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    HeroLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    HerorightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroRightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     heroBottomIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     contentLeftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroBgEllipse: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -217,6 +218,7 @@ export interface LandingPageCategory extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     viewButton: Attribute.Component<'menu.menu-button'>;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
