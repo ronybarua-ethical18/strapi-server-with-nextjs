@@ -46,6 +46,9 @@ const populate = {
           },
         },
       },
+      bgImg: {
+        fields: ["url", "width", "height"],
+      },
       Feature: {
         populate: {
           icon: {
