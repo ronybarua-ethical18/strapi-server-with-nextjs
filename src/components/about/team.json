@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_teams",
+  "info": {
+    "displayName": "team",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

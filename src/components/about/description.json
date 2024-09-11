@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_descriptions",
+  "info": {
+    "displayName": "description",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

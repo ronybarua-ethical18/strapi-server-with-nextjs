@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "AboutUs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about": {
+      "type": "dynamiczone",
+      "components": [
+        "about.team",
+        "about.team-list",
+        "about.services-with-title",
+        "about.service-list",
+        "about.heading",
+        "about.description",
+        "landing-page.contact"
+      ]
+    }
+  }
+}

@@ -1,15 +1,15 @@
 'use strict';
 
 /**
- * footer router
+ * about-us router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::footer.footer',{
+module.exports = createCoreRouter('api::about-us.about-us',{
     config: {
       find: {
-        middlewares: ["api::footer.footer-populate"],
+        middlewares: ["api::about-us.about-us-populate"],
       },
     },
   });

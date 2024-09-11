@@ -302,6 +302,97 @@ export interface FooterAboutLink extends Schema.Component {
   };
 }
 
+export interface AboutTeam extends Schema.Component {
+  collectionName: 'components_about_teams';
+  info: {
+    displayName: 'team';
+    icon: 'collapse';
+  };
+  attributes: {
+    name: Attribute.String;
+    designation: Attribute.String;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface AboutTeamList extends Schema.Component {
+  collectionName: 'components_about_team_lists';
+  info: {
+    displayName: 'TeamList';
+    icon: 'cog';
+    description: '';
+  };
+  attributes: {
+    Team: Attribute.Component<'about.team', true>;
+    title: Attribute.String;
+  };
+}
+
+export interface AboutServicesWithTitle extends Schema.Component {
+  collectionName: 'components_about_services_with_titles';
+  info: {
+    displayName: 'servicesWithTitle';
+    icon: 'command';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Enumeration<['white', 'blue']>;
+    service: Attribute.Component<'about.service-list', true>;
+  };
+}
+
+export interface AboutServiceList extends Schema.Component {
+  collectionName: 'components_about_service_lists';
+  info: {
+    displayName: 'serviceList';
+    icon: 'star';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bgType: Attribute.Enumeration<
+      ['blue', 'purple', 'green', 'tomato', 'violet']
+    >;
+  };
+}
+
+export interface AboutHeading extends Schema.Component {
+  collectionName: 'components_about_headings';
+  info: {
+    displayName: 'heading';
+    icon: 'check';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    subTitle2: Attribute.String;
+    description: Attribute.Text;
+    rightIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    leftIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bottomIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgOne: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgTwo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgThree: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgFour: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface AboutDescription extends Schema.Component {
+  collectionName: 'components_about_descriptions';
+  info: {
+    displayName: 'description';
+    icon: 'code';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -326,6 +417,12 @@ declare module '@strapi/types' {
       'footer.footer': FooterFooter;
       'footer.contact-section': FooterContactSection;
       'footer.about-link': FooterAboutLink;
+      'about.team': AboutTeam;
+      'about.team-list': AboutTeamList;
+      'about.services-with-title': AboutServicesWithTitle;
+      'about.service-list': AboutServiceList;
+      'about.heading': AboutHeading;
+      'about.description': AboutDescription;
     }
   }
 }

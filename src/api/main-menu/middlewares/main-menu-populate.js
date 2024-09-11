@@ -25,6 +25,9 @@ const populate = {
           },
         },
       },
+      logo:{
+        fields:["url", "width", "height"]
+      }
     },
   },
 };

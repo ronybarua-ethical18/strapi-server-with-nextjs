@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_about_team_lists",
+  "info": {
+    "displayName": "TeamList",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Team": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.team"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

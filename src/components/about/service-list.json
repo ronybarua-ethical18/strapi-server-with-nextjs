@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_about_service_lists",
+  "info": {
+    "displayName": "serviceList",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bgType": {
+      "type": "enumeration",
+      "enum": [
+        "blue",
+        "purple",
+        "green",
+        "tomato",
+        "violet"
+      ]
+    }
+  }
+}
