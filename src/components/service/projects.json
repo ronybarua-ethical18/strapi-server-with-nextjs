@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_service_projects",
+  "info": {
+    "displayName": "projects",
+    "icon": "sun",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "project": {
+      "displayName": "singleProject",
+      "type": "component",
+      "repeatable": true,
+      "component": "service.single-project"
+    }
+  }
+}

@@ -53,7 +53,9 @@ const populate = {
             fields:imgFields
           }
         }
-      }
+      },
+      subscribeBtn:true,
+      button:true
     },
   },
 };

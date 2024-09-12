@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service": {
+      "type": "dynamiczone",
+      "components": [
+        "service.services",
+        "service.heading",
+        "service.service-description",
+        "service.statistics",
+        "service.couter",
+        "service.projects",
+        "service.single-project"
+      ]
+    }
+  }
+}

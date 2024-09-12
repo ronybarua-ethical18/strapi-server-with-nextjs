@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_landing_page_services",
+  "collectionName": "components_service_single_projects",
   "info": {
-    "displayName": "Service",
-    "icon": "command",
+    "displayName": "project",
     "description": ""
   },
   "options": {},
@@ -13,7 +12,7 @@
     "description": {
       "type": "text"
     },
-    "icon": {
+    "img": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -22,16 +21,6 @@
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "bgType": {
-      "type": "enumeration",
-      "enum": [
-        "purple",
-        "green",
-        "blue",
-        "tomato",
-        "violet"
       ]
     }
   }

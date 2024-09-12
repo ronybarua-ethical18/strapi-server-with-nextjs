@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_service_couters",
+  "info": {
+    "displayName": "counter",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "value": {
+      "type": "integer"
+    }
+  }
+}

@@ -13,18 +13,16 @@
     "description": {
       "type": "text"
     },
-    "button": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "blue"
-      ]
-    },
     "service": {
       "displayName": "serviceList",
       "type": "component",
       "repeatable": true,
       "component": "about.service-list"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "menu.menu-button"
     }
   }
 }

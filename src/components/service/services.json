@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_service_services",
+  "info": {
+    "displayName": "services",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "service": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.service"
+    }
+  }
+}

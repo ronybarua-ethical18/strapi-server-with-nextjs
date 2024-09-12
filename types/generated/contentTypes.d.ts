@@ -993,6 +993,47 @@ export interface ApiSectionSection extends Schema.CollectionType {
   };
 }
 
+export interface ApiServiceService extends Schema.SingleType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    service: Attribute.DynamicZone<
+      [
+        'service.services',
+        'service.heading',
+        'service.service-description',
+        'service.statistics',
+        'service.couter',
+        'service.projects',
+        'service.single-project'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1016,6 +1057,7 @@ declare module '@strapi/types' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
       'api::section.section': ApiSectionSection;
+      'api::service.service': ApiServiceService;
     }
   }
 }

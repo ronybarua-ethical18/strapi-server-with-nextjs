@@ -1,5 +1,99 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ServiceStatistics extends Schema.Component {
+  collectionName: 'components_service_statistics';
+  info: {
+    displayName: 'statistics';
+    icon: 'manyToMany';
+    description: '';
+  };
+  attributes: {
+    counter: Attribute.Component<'service.couter', true>;
+    leftTopIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    leftBottomIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    rightTopIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    rightTopBellIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ServiceSingleProject extends Schema.Component {
+  collectionName: 'components_service_single_projects';
+  info: {
+    displayName: 'project';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ServiceServices extends Schema.Component {
+  collectionName: 'components_service_services';
+  info: {
+    displayName: 'services';
+    icon: 'cog';
+  };
+  attributes: {
+    service: Attribute.Component<'landing-page.service', true>;
+  };
+}
+
+export interface ServiceServiceDescription extends Schema.Component {
+  collectionName: 'components_service_service_descriptions';
+  info: {
+    displayName: 'serviceDescription';
+    icon: 'briefcase';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'menu.menu-button', true>;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ServiceProjects extends Schema.Component {
+  collectionName: 'components_service_projects';
+  info: {
+    displayName: 'projects';
+    icon: 'sun';
+    description: '';
+  };
+  attributes: {
+    project: Attribute.Component<'service.single-project', true>;
+  };
+}
+
+export interface ServiceHeading extends Schema.Component {
+  collectionName: 'components_service_headings';
+  info: {
+    displayName: 'heading';
+    icon: 'television';
+    description: '';
+  };
+  attributes: {
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface ServiceCouter extends Schema.Component {
+  collectionName: 'components_service_couters';
+  info: {
+    displayName: 'counter';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    value: Attribute.Integer;
+  };
+}
+
 export interface MenuMenuLink extends Schema.Component {
   collectionName: 'components_menu_menu_links';
   info: {
@@ -94,7 +188,9 @@ export interface LandingPageService extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    bgType: Attribute.Enumeration<['purple', 'green', 'blue', 'tomato']>;
+    bgType: Attribute.Enumeration<
+      ['purple', 'green', 'blue', 'tomato', 'violet']
+    >;
   };
 }
 
@@ -307,6 +403,7 @@ export interface AboutTeam extends Schema.Component {
   info: {
     displayName: 'team';
     icon: 'collapse';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
@@ -338,8 +435,8 @@ export interface AboutServicesWithTitle extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    button: Attribute.Enumeration<['white', 'blue']>;
     service: Attribute.Component<'about.service-list', true>;
+    button: Attribute.Component<'menu.menu-button'>;
   };
 }
 
@@ -396,6 +493,13 @@ export interface AboutDescription extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'service.statistics': ServiceStatistics;
+      'service.single-project': ServiceSingleProject;
+      'service.services': ServiceServices;
+      'service.service-description': ServiceServiceDescription;
+      'service.projects': ServiceProjects;
+      'service.heading': ServiceHeading;
+      'service.couter': ServiceCouter;
       'menu.menu-link': MenuMenuLink;
       'menu.menu-button': MenuMenuButton;
       'menu.logo-section': MenuLogoSection;
