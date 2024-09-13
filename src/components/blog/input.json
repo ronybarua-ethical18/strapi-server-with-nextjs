@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blog_inputs",
+  "info": {
+    "displayName": "input",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "placeholder": {
+      "type": "string"
+    },
+    "bgType": {
+      "type": "enumeration",
+      "enum": [
+        "lightgray",
+        "white"
+      ]
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

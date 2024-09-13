@@ -12,6 +12,9 @@
       "type": "component",
       "repeatable": true,
       "component": "service.single-project"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

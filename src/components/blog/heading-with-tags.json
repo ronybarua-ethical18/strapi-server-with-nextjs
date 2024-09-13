@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blog_heading_with_tags",
+  "info": {
+    "displayName": "HeadingWithTags",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "input": {
+      "displayName": "input",
+      "type": "component",
+      "repeatable": false,
+      "component": "blog.input"
+    },
+    "tag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.tags"
+    }
+  }
+}

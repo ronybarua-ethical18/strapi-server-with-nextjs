@@ -829,6 +829,47 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
 }
 
+export interface ApiBlogPageBlogPage extends Schema.SingleType {
+  collectionName: 'blog_pages';
+  info: {
+    singularName: 'blog-page';
+    pluralName: 'blog-pages';
+    displayName: 'BlogPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blog: Attribute.DynamicZone<
+      [
+        'blog.tags',
+        'blog.single-tag',
+        'blog.latest-blogs',
+        'blog.input',
+        'blog.heading-with-tags',
+        'blog.featured-blog',
+        'landing-page.contact'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -998,7 +1039,7 @@ export interface ApiServiceService extends Schema.SingleType {
   info: {
     singularName: 'service';
     pluralName: 'services';
-    displayName: 'service';
+    displayName: 'ServicePage';
     description: '';
   };
   options: {
@@ -1013,7 +1054,8 @@ export interface ApiServiceService extends Schema.SingleType {
         'service.statistics',
         'service.couter',
         'service.projects',
-        'service.single-project'
+        'service.single-project',
+        'landing-page.contact'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1053,6 +1095,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;

@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_pages",
+  "info": {
+    "singularName": "blog-page",
+    "pluralName": "blog-pages",
+    "displayName": "BlogPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blog": {
+      "type": "dynamiczone",
+      "components": [
+        "blog.tags",
+        "blog.single-tag",
+        "blog.latest-blogs",
+        "blog.input",
+        "blog.heading-with-tags",
+        "blog.featured-blog",
+        "landing-page.contact"
+      ]
+    }
+  }
+}

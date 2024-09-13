@@ -22,6 +22,22 @@
         "videos",
         "audios"
       ]
+    },
+    "author": {
+      "type": "string"
+    },
+    "authorImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

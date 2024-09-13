@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blog_tags",
+  "info": {
+    "displayName": "tags",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bgType": {
+      "type": "enumeration",
+      "enum": [
+        "blue",
+        "gray"
+      ]
+    }
+  }
+}

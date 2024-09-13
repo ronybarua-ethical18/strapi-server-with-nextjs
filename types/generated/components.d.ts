@@ -26,6 +26,9 @@ export interface ServiceSingleProject extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    author: Attribute.String;
+    authorImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    date: Attribute.Date;
   };
 }
 
@@ -34,6 +37,7 @@ export interface ServiceServices extends Schema.Component {
   info: {
     displayName: 'services';
     icon: 'cog';
+    description: '';
   };
   attributes: {
     service: Attribute.Component<'landing-page.service', true>;
@@ -64,6 +68,7 @@ export interface ServiceProjects extends Schema.Component {
   };
   attributes: {
     project: Attribute.Component<'service.single-project', true>;
+    title: Attribute.String;
   };
 }
 
@@ -398,6 +403,87 @@ export interface FooterAboutLink extends Schema.Component {
   };
 }
 
+export interface BlogTags extends Schema.Component {
+  collectionName: 'components_blog_tags';
+  info: {
+    displayName: 'tags';
+    icon: 'attachment';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    bgType: Attribute.Enumeration<['blue', 'gray']>;
+  };
+}
+
+export interface BlogSingleTag extends Schema.Component {
+  collectionName: 'components_blog_single_tags';
+  info: {
+    displayName: 'tag';
+    icon: 'attachment';
+    description: '';
+  };
+  attributes: {
+    tag: Attribute.Component<'blog.tags', true>;
+  };
+}
+
+export interface BlogLatestBlogs extends Schema.Component {
+  collectionName: 'components_blog_latest_blogs';
+  info: {
+    displayName: 'latestBlogs';
+    icon: 'slideshow';
+    description: '';
+  };
+  attributes: {
+    blog: Attribute.Component<'service.single-project', true>;
+  };
+}
+
+export interface BlogInput extends Schema.Component {
+  collectionName: 'components_blog_inputs';
+  info: {
+    displayName: 'input';
+    icon: 'plus';
+  };
+  attributes: {
+    placeholder: Attribute.String;
+    bgType: Attribute.Enumeration<['lightgray', 'white']>;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface BlogHeadingWithTags extends Schema.Component {
+  collectionName: 'components_blog_heading_with_tags';
+  info: {
+    displayName: 'HeadingWithTags';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    description: Attribute.Text;
+    input: Attribute.Component<'blog.input'>;
+    tag: Attribute.Component<'blog.tags', true>;
+  };
+}
+
+export interface BlogFeaturedBlog extends Schema.Component {
+  collectionName: 'components_blog_featured_blogs';
+  info: {
+    displayName: 'featuredBlog';
+    icon: 'bold';
+    description: '';
+  };
+  attributes: {
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    author: Attribute.Component<'about.author'>;
+  };
+}
+
 export interface AboutTeam extends Schema.Component {
   collectionName: 'components_about_teams';
   info: {
@@ -490,6 +576,20 @@ export interface AboutDescription extends Schema.Component {
   };
 }
 
+export interface AboutAuthor extends Schema.Component {
+  collectionName: 'components_about_authors';
+  info: {
+    displayName: 'author';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    date: Attribute.Date;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -521,12 +621,19 @@ declare module '@strapi/types' {
       'footer.footer': FooterFooter;
       'footer.contact-section': FooterContactSection;
       'footer.about-link': FooterAboutLink;
+      'blog.tags': BlogTags;
+      'blog.single-tag': BlogSingleTag;
+      'blog.latest-blogs': BlogLatestBlogs;
+      'blog.input': BlogInput;
+      'blog.heading-with-tags': BlogHeadingWithTags;
+      'blog.featured-blog': BlogFeaturedBlog;
       'about.team': AboutTeam;
       'about.team-list': AboutTeamList;
       'about.services-with-title': AboutServicesWithTitle;
       'about.service-list': AboutServiceList;
       'about.heading': AboutHeading;
       'about.description': AboutDescription;
+      'about.author': AboutAuthor;
     }
   }
 }

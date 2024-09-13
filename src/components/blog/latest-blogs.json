@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_latest_blogs",
+  "info": {
+    "displayName": "latestBlogs",
+    "icon": "slideshow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blog": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.single-project"
+    }
+  }
+}

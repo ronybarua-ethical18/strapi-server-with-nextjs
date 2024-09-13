@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_single_tags",
+  "info": {
+    "displayName": "tag",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.tags"
+    }
+  }
+}

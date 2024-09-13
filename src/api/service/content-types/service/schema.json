@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "service",
+    "displayName": "ServicePage",
     "description": ""
   },
   "options": {
@@ -21,7 +21,8 @@
         "service.statistics",
         "service.couter",
         "service.projects",
-        "service.single-project"
+        "service.single-project",
+        "landing-page.contact"
       ]
     }
   }
