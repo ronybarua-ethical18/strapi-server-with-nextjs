@@ -9,7 +9,13 @@ const imgFields = ["url", "width", "height"];
 const populate = {
   blog: {
     populate: {
-      input: true,
+      input: {
+        populate: {
+          icon: {
+            fields: imgFields,
+          },
+        },
+      },
       tag: true,
       img: {
         fields: imgFields,
@@ -25,6 +31,9 @@ const populate = {
       blog: {
         populate: {
           authorImg: {
+            fields: imgFields,
+          },
+          img: {
             fields: imgFields,
           },
         },

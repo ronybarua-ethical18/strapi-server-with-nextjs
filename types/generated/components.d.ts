@@ -403,6 +403,50 @@ export interface FooterAboutLink extends Schema.Component {
   };
 }
 
+export interface ContactInput extends Schema.Component {
+  collectionName: 'components_contact_inputs';
+  info: {
+    displayName: 'input';
+    icon: 'filter';
+    description: '';
+  };
+  attributes: {
+    placeholder: Attribute.String;
+    type: Attribute.Enumeration<['text', 'email', 'textarea', 'number']>;
+    row: Attribute.Integer;
+  };
+}
+
+export interface ContactHeadingWithMap extends Schema.Component {
+  collectionName: 'components_contact_heading_with_maps';
+  info: {
+    displayName: 'headingWithMap';
+    icon: 'earth';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    mapImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    dotImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ContactContactForm extends Schema.Component {
+  collectionName: 'components_contact_contact_forms';
+  info: {
+    displayName: 'contactForm';
+    icon: 'chartBubble';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    input: Attribute.Component<'contact.input', true>;
+  };
+}
+
 export interface BlogTags extends Schema.Component {
   collectionName: 'components_blog_tags';
   info: {
@@ -621,6 +665,9 @@ declare module '@strapi/types' {
       'footer.footer': FooterFooter;
       'footer.contact-section': FooterContactSection;
       'footer.about-link': FooterAboutLink;
+      'contact.input': ContactInput;
+      'contact.heading-with-map': ContactHeadingWithMap;
+      'contact.contact-form': ContactContactForm;
       'blog.tags': BlogTags;
       'blog.single-tag': BlogSingleTag;
       'blog.latest-blogs': BlogLatestBlogs;
