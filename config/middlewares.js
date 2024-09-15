@@ -17,9 +17,8 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
-      origin: ['*'], // Be cautious with this in production
-      headers: ['*'],
+      origin: ['*'], // Change '*' to specific domains in production
+      headers: ['Authorization', 'Content-Type'], // Only allow necessary headers
     },
   },
   'strapi::poweredBy',
