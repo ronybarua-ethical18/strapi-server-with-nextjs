@@ -1,31 +1,37 @@
-module.exports = [
-  'strapi::errors',
+module.exports = ({ env }) => [
+  "strapi::errors",
   {
-    name: 'strapi::security',
+    name: "strapi::security",
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'https://market-assets.strapi.io'],
-          'media-src': ["'self'", 'data:', 'blob:'],
-          upgradeInsecureRequests: null,
+          "connect-src": ["'self'", "https:"],
+          "default-src": ["'self'"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            env("SUPABASE_URL"),
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            env("SUPABASE_URL"),
+          ],
         },
       },
     },
   },
-  {
-    name: 'strapi::cors',
-    config: {
-      origin: ['*'], // Change '*' to specific domains in production
-      headers: ['Authorization', 'Content-Type'], // Only allow necessary headers
-    },
-  },
-  'strapi::poweredBy',
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::cors",
+  "strapi::poweredBy",
+  "strapi::logger",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
