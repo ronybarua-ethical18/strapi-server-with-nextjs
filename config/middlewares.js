@@ -6,7 +6,7 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:", "ws:", env("SUPABASE_API_URL", "")],
+          "connect-src": ["'self'", "https:"],
           "img-src": ["'self'", "data:", "blob:", "dl.airtable.com", "market-assets.strapi.io", env("SUPABASE_API_URL", ""), env("SUPABASE_URL", ""), "*"],
           "media-src": ["'self'", "data:", "blob:", "dl.airtable.com", "market-assets.strapi.io", env("SUPABASE_API_URL", ""), env("SUPABASE_URL", ""), "*"],
           upgradeInsecureRequests: null,
