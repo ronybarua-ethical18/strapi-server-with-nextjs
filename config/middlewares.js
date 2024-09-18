@@ -6,27 +6,22 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
-          "default-src": ["'self'"],
-          "img-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "market-assets.strapi.io",
-            env("SUPABASE_URL"),
-          ],
-          "media-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "market-assets.strapi.io",
-            env("SUPABASE_URL"),
-          ],
+          "connect-src": ["'self'", "https:", "ws:", env("SUPABASE_API_URL", "")],
+          "img-src": ["'self'", "data:", "blob:", "dl.airtable.com", "market-assets.strapi.io", env("SUPABASE_API_URL", ""), env("SUPABASE_URL", ""), "*"],
+          "media-src": ["'self'", "data:", "blob:", "dl.airtable.com", "market-assets.strapi.io", env("SUPABASE_API_URL", ""), env("SUPABASE_URL", ""), "*"],
+          upgradeInsecureRequests: null,
         },
       },
     },
   },
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      header: "*",
+      origin: ["*"]
+    }
+  },
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
